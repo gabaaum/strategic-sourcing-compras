@@ -37,12 +37,26 @@ section{padding:88px 20px}
 .s-light{background:var(--dark3)}
 
 /* Hero */
-.hero{background:var(--dark);padding:80px 20px 60px;text-align:center}
-.hero-inner{max-width:860px;margin:0 auto}
+.hero{background:#05080f;padding:0;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(20,48,94,.85) 0%,#05080f 65%);z-index:0;pointer-events:none}
+.hero-photo-desktop{display:none;position:absolute;right:0;top:0;width:50%;height:100%;z-index:0;overflow:hidden;pointer-events:none}
+.hero-photo-desktop::before{content:'';position:absolute;left:0;top:0;width:40%;height:100%;background:linear-gradient(to right,#05080f 0%,rgba(5,8,15,.85) 40%,transparent 100%);z-index:1}
+.hero-photo-desktop img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-photo-mobile{display:block;position:absolute;left:0;top:0;width:100%;height:55vh;z-index:0;overflow:hidden;pointer-events:none}
+.hero-photo-mobile::after{content:'';position:absolute;left:0;right:0;bottom:0;height:85%;background:linear-gradient(to top,rgba(5,8,15,1) 0%,rgba(5,8,15,.95) 25%,rgba(5,8,15,.6) 55%,rgba(5,8,15,0) 100%);z-index:10}
+.hero-photo-mobile img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;padding:0 24px;position:relative;z-index:10;padding-top:52vh;padding-bottom:56px}
+.hero-content{max-width:100%;display:flex;flex-direction:column;align-items:flex-start}
 .hero-label{display:inline-block;background:rgba(240,115,22,.15);border:1px solid rgba(240,115,22,.4);color:var(--orange2);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:28px}
-.hero h1{font-size:clamp(1.5rem,3.2vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:24px;color:#fff}
+.hero h1{font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:20px;color:#fff;text-align:left}
 .hero h1 em{color:var(--orange2);font-style:normal}
-.hero-sub{font-size:1.05rem;color:var(--gray2);margin-bottom:40px;line-height:1.8;max-width:720px;margin-left:auto;margin-right:auto}
+.hero-sub{font-size:.97rem;color:var(--gray2);margin-bottom:36px;line-height:1.8;text-align:left}
+@media(min-width:1024px){
+  .hero-photo-desktop{display:block}
+  .hero-photo-mobile{display:none}
+  .hero-inner{padding-top:0;padding-bottom:0;padding-left:48px;padding-right:48px;min-height:100vh;display:flex;align-items:center}
+  .hero-content{max-width:54%}
+}
 
 /* VSL */
 .vsl-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(240,115,22,.2);border-radius:12px;overflow:hidden;max-width:760px;margin:0 auto 36px;position:relative}
@@ -152,17 +166,34 @@ section{padding:88px 20px}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-photo-desktop">
+    <img src="hero.png" alt="Instrutor">
+  </div>
+  <div class="hero-photo-mobile">
+    <img src="hero.png" alt="Instrutor">
+  </div>
+
   <div class="hero-inner">
-    <div class="hero-label">Strategic Sourcing & Técnicas de Compras</div>
-    <h1>O treinamento que transforma Compradores operacionais em profissionais <em>estratégicos,</em> com método prático, estudos de caso reais e aplicação imediata na sua empresa.</h1>
-    <p class="hero-sub">Assista ao vídeo abaixo e entenda como dominar as principais Técnicas de Compras e a Metodologia de Strategic Sourcing pode mudar a sua carreira nos próximos meses.</p>
+    <div class="hero-content">
+      <div class="hero-label">Strategic Sourcing &amp; Técnicas de Compras</div>
+      <h1>O treinamento que transforma Compradores operacionais em profissionais <em>estratégicos,</em> com método prático, estudos de caso reais e aplicação imediata na sua empresa.</h1>
+      <p class="hero-sub">Assista ao vídeo abaixo e entenda como dominar as principais Técnicas de Compras e a Metodologia de Strategic Sourcing pode mudar a sua carreira nos próximos meses.</p>
+      <a href="#oferta" class="btn">Quero me tornar um Comprador estratégico</a>
+    </div>
+  </div>
+</section>
+
+<!-- VSL -->
+<section class="s-darker" style="padding:60px 20px">
+  <div class="container">
     <div class="vsl-wrap">
       <div class="vsl-inner">
         <div class="vsl-play"></div>
         <span class="vsl-label">Assista ao vídeo</span>
       </div>
     </div>
-    <a href="#oferta" class="btn">Quero me tornar um Comprador estratégico</a>
   </div>
 </section>
 
