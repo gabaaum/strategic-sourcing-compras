@@ -93,12 +93,17 @@ section{padding:88px 20px}
 .divider-left{width:56px;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange2));border-radius:2px;margin:0 0 20px}
 
 /* Depoimentos */
-.dep-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:40px}
-.dep-card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 24px}
-.dep-photo{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--dark3),var(--navy2));border:2px solid rgba(240,115,22,.3);margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:rgba(240,115,22,.35)}
-.dep-name{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:2px}
-.dep-cargo{font-size:.75rem;color:var(--orange2);margin-bottom:12px}
-.dep-text{font-size:.83rem;color:var(--gray);line-height:1.75;font-style:italic}
+.dep-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+.dep-card{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 26px;text-decoration:none;transition:transform .2s,border-color .2s,box-shadow .2s}
+.dep-card:hover{transform:translateY(-3px);border-color:rgba(240,115,22,.4);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.dep-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.dep-photo{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--dark3),var(--navy2));border:2px solid rgba(240,115,22,.35);flex:none;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.dep-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.dep-name{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:2px}
+.dep-cargo{font-size:.76rem;color:var(--orange2)}
+.dep-text{font-size:.85rem;color:var(--gray);line-height:1.75;font-style:italic}
+.dep-li{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--orange2)}
+.dep-li svg{width:15px;height:15px;fill:currentColor}
 .dep-result{display:inline-block;background:rgba(240,115,22,.12);border:1px solid rgba(240,115,22,.3);color:var(--orange2);font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:100px;margin-top:12px}
 
 /* Destaque box */
@@ -247,48 +252,50 @@ section{padding:88px 20px}
     <h2 class="section-title" style="text-align:center">Resultados de quem <em>aplicou o método</em></h2>
     <br>
     <div class="dep-grid">
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
-      <div class="dep-card">
-        <div class="dep-photo">◈</div>
-        <div class="dep-name">Foto do aluno</div>
-        <div class="dep-cargo">Cargo · Empresa</div>
-        <p class="dep-text">Depoimento do aluno aqui.</p>
-        <span class="dep-result">Resultado obtido</span>
-      </div>
+      <a class="dep-card" href="https://www.linkedin.com/in/nelson-charleaux-junior-3413367b/" target="_blank" rel="noopener">
+        <div class="dep-head">
+          <div class="dep-photo"><img src="assets/dep/nelson.png" alt="Nelson Charleaux Junior" loading="lazy"></div>
+          <div>
+            <div class="dep-name">Nelson Charleaux Junior</div>
+            <div class="dep-cargo">Comprador Pleno · Diretos</div>
+          </div>
+        </div>
+        <p class="dep-text">"Tenho vivido uma verdadeira jornada de aprendizado e desenvolvimento na mentoria do Estratégia. Estou no auge da busca por aprimoramento contínuo, e o professor Leonardo Rosa e sua plataforma inovadora Estratégia de Compras têm sido os principais responsáveis por esse impulso."</p>
+        <span class="dep-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Ver no LinkedIn</span>
+      </a>
+      <a class="dep-card" href="https://www.linkedin.com/in/camila-araujo-compras/" target="_blank" rel="noopener">
+        <div class="dep-head">
+          <div class="dep-photo"><img src="assets/dep/camila.png" alt="Camila Araujo" loading="lazy"></div>
+          <div>
+            <div class="dep-name">Camila Araujo</div>
+            <div class="dep-cargo">Analista de Compras Sênior</div>
+          </div>
+        </div>
+        <p class="dep-text">"A mentoria em compras do Léo Rosa foi muito importante para meu autoconhecimento profissional. Já atuando há quase 15 anos como compradora, foi muito importante rever conceitos, estratégias de compras e aprender a evolução da área. O ponto mais importante foi que me ajudou a juntar duas áreas que tenho paixão — compras e dados — para enfim trilhar uma transição de carreira para inteligência de compras."</p>
+        <span class="dep-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Ver no LinkedIn</span>
+      </a>
+      <a class="dep-card" href="https://www.linkedin.com/in/adrianadornela/" target="_blank" rel="noopener">
+        <div class="dep-head">
+          <div class="dep-photo"><img src="assets/dep/adriana.png" alt="Adriana Santos Dornela" loading="lazy"></div>
+          <div>
+            <div class="dep-name">Adriana Santos Dornela</div>
+            <div class="dep-cargo">Analista de Importação e Exportação</div>
+          </div>
+        </div>
+        <p class="dep-text">"Quando abriram as vagas para a mentoria, não pensei duas vezes, vi uma grande oportunidade para me atualizar sobre a nossa área e adquirir mais conhecimentos. Tive a oportunidade de conhecer o Léo e os outros alunos, que são pessoas incríveis. Tivemos uma troca muito bacana e essencial para o nosso crescimento. E quando menos esperava, apareceu uma nova oportunidade de emprego."</p>
+        <span class="dep-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Ver no LinkedIn</span>
+      </a>
+      <a class="dep-card" href="https://www.linkedin.com/in/eliane-almeida-de-oliveira/" target="_blank" rel="noopener">
+        <div class="dep-head">
+          <div class="dep-photo"><img src="assets/dep/eliane.png" alt="Eliane S. Almeida de Oliveira" loading="lazy"></div>
+          <div>
+            <div class="dep-name">Eliane S. Almeida de Oliveira</div>
+            <div class="dep-cargo">Compradora Estratégica</div>
+          </div>
+        </div>
+        <p class="dep-text">"O certificado da mentoria está carregado de muita gratidão e, diferente de tantos outros, tem um significado muito especial! Diz muito sobre meu crescimento profissional e pessoal, sobre desenvolver meu autoconhecimento, reconhecer e valorizar minhas qualidades, habilidades e toda a bagagem adquirida ao longo da minha carreira. O agradecimento todo especial vai para nosso mentor!"</p>
+        <span class="dep-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Ver no LinkedIn</span>
+      </a>
     </div>
     <a href="#oferta" class="btn">Quero ter esses resultados na minha carreira</a>
   </div>
