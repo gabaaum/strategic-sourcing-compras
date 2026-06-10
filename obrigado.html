@@ -80,29 +80,6 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);paddin
   </div>
 </div>
 
-<!-- DETALHES DO PEDIDO -->
-<section class="pedido-section">
-  <div class="pedido-inner">
-    <div class="divider"></div>
-    <h2 style="font-size:1.1rem;font-weight:700;color:#fff;text-align:center;margin-bottom:4px">Detalhes do seu pedido:</h2>
-    <div class="pedido-card">
-      <div class="pedido-title">Resumo da compra</div>
-      <div class="pedido-row">
-        <span class="pedido-label">Data da compra</span>
-        <span class="pedido-value" id="data-compra">Carregando...</span>
-      </div>
-      <div class="pedido-row">
-        <span class="pedido-label">Número do pedido</span>
-        <span class="pedido-value">#000000</span>
-      </div>
-      <div class="pedido-row">
-        <span class="pedido-label">Produto</span>
-        <span class="pedido-value">Treinamento Strategic Sourcing</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- UPSELL -->
 <section class="upsell-section">
   <div class="upsell-inner">
@@ -122,10 +99,5 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);paddin
   &copy; 2025 Treinamento de Strategic Sourcing &amp; Técnicas de Compras. Todos os direitos reservados.
 </footer>
 
-<script>
-var d = new Date();
-var meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-document.getElementById('data-compra').textContent = d.getDate() + ' de ' + meses[d.getMonth()] + ' de ' + d.getFullYear();
-</script>
 </body>
 </html>
