@@ -6,169 +6,91 @@
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compra Confirmada | Treinamento de Strategic Sourcing</title>
+<title>Inscrição quase confirmada | Comprador Estratégico</title>
+<meta name="description" content="Falta apenas 2 passos para garantir seu lugar na aula Como se tornar um Comprador Estratégico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --dark:   #06090f;
-  --dark2:  #0c1626;
-  --dark3:  #0f2040;
-  --navy:   #14305e;
-  --navy2:  #1a3a6e;
-  --orange: #f07316;
-  --orange2:#ff9f4a;
-  --white:  #ffffff;
-  --gray:   #8fa3c0;
-  --gray2:  #c5d4e8;
-}
-body{font-family:'Inter',sans-serif;color:var(--white);background:var(--dark);line-height:1.6;min-height:100vh}
+:root{--dark:#05080f;--dark2:#08111f;--dark3:#0d1b31;--navy:#14305e;--orange:#f07316;--orange2:#ff9f4a;--white:#fff;--gray:#8fa3c0;--gray2:#c5d4e8;--line:rgba(255,255,255,.1)}
+body{font-family:'Inter',sans-serif;color:var(--white);background:radial-gradient(circle at 50% 0%,rgba(240,115,22,.22),transparent 34%),linear-gradient(180deg,#05080f 0%,#08111f 55%,#05080f 100%);line-height:1.65;min-height:100vh}
 a{text-decoration:none;color:inherit}
-
-/* Header confirmação */
-.confirm-header{background:linear-gradient(135deg,var(--dark3) 0%,var(--navy) 100%);border-bottom:3px solid var(--orange);padding:56px 20px;text-align:center}
-.confirm-inner{max-width:680px;margin:0 auto}
-.confirm-check{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#bf5c09,var(--orange));display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 8px 32px rgba(240,115,22,.4)}
-.confirm-check::after{content:'✓';font-size:2rem;font-weight:900;color:#fff}
-.confirm-header h1{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:12px;color:#fff}
-.confirm-header h1 em{color:var(--orange2);font-style:normal}
-.confirm-header p{font-size:1rem;color:var(--gray2);line-height:1.7;max-width:560px;margin:0 auto}
-
-/* Detalhes do pedido */
-.pedido-section{background:var(--dark2);padding:60px 20px}
-.pedido-inner{max-width:680px;margin:0 auto}
-.pedido-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:32px;margin-top:32px}
-.pedido-title{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange2);margin-bottom:20px}
-.pedido-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.pedido-row:last-child{border-bottom:none}
-.pedido-label{font-size:.88rem;color:var(--gray)}
-.pedido-value{font-size:.88rem;color:var(--gray2);font-weight:600;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:4px 14px;border-radius:6px}
-
-/* Divider */
-.divider{width:56px;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange2));border-radius:2px;margin:0 auto 20px}
-
-/* Upsell */
-.upsell-section{background:var(--dark);padding:80px 20px;text-align:center}
-.upsell-inner{max-width:760px;margin:0 auto}
-.upsell-badge{display:inline-block;background:rgba(240,115,22,.15);border:1px solid rgba(240,115,22,.4);color:var(--orange2);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:28px}
-.upsell-inner h2{font-size:clamp(1.2rem,2.8vw,1.8rem);font-weight:800;line-height:1.3;margin-bottom:16px;color:#fff}
-.upsell-inner h2 em{color:var(--orange2);font-style:normal}
-.upsell-inner p{font-size:1rem;color:var(--gray2);margin-bottom:36px;line-height:1.8;max-width:600px;margin-left:auto;margin-right:auto}
-
-/* VSL */
-.vsl-wrap{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(240,115,22,.2);border-radius:12px;overflow:hidden;max-width:680px;margin:0 auto}
-.vsl-inner{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:linear-gradient(135deg,var(--dark3) 0%,var(--navy) 100%)}
-.vsl-play{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#bf5c09,var(--orange));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(240,115,22,.5)}
-.vsl-play::after{content:'';width:0;height:0;border-style:solid;border-width:14px 0 14px 26px;border-color:transparent transparent transparent #fff;margin-left:5px}
-.vsl-label{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
-.vsl-unmute{position:absolute;inset:0;z-index:3;width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(6,9,15,.5);border:none;cursor:pointer;color:#fff;font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;transition:background .25s,opacity .3s}
-.vsl-unmute .ic{font-size:1.4rem;line-height:1}
-.vsl-unmute:hover{background:rgba(6,9,15,.62)}
-.vsl-unmute.hide{opacity:0;pointer-events:none}
-.vsl-speed{max-width:680px;margin:14px auto 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
-.vsl-speed .lbl{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);font-weight:700;margin-right:2px}
-.vsl-speed button{font-family:'Inter',sans-serif;font-weight:800;font-size:.74rem;padding:.42em .8em;border-radius:6px;cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(240,115,22,.25);color:var(--orange2);transition:.2s}
-.vsl-speed button:hover{background:rgba(240,115,22,.14)}
-.vsl-speed button.on{background:linear-gradient(135deg,#bf5c09,var(--orange));border-color:var(--orange);color:#fff}
-#vslVideo::-webkit-media-controls-timeline{display:none !important}
-#vslVideo::-webkit-media-controls-seek-back-button,#vslVideo::-webkit-media-controls-seek-forward-button{display:none !important}
-
-/* CTA abaixo da VSL */
-.cta-btn{display:inline-block;margin-top:32px;background:linear-gradient(135deg,#bf5c09 0%,#f07316 40%,#ff9f4a 55%,#bf5c09 100%);color:#fff;font-family:'Inter',sans-serif;font-weight:800;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase;padding:20px 44px;border-radius:8px;text-decoration:none;box-shadow:0 12px 34px rgba(240,115,22,.4);transition:transform .2s,box-shadow .2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(240,115,22,.55)}
-
-/* Footer */
-footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);padding:28px 20px;text-align:center;font-size:.8rem;color:var(--gray)}
-
-@media(max-width:480px){
-  .confirm-header{padding:40px 20px}
-  .pedido-section{padding:40px 20px}
-  .upsell-section{padding:60px 20px}
-}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.wrap{width:min(1040px,calc(100% - 40px));margin:0 auto;position:relative;z-index:1}
+.hero{padding:88px 0 52px;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(240,115,22,.4);background:rgba(240,115,22,.13);color:var(--orange2);font-size:.72rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:28px}
+.badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--orange2);box-shadow:0 0 18px var(--orange2)}
+h1{font-size:clamp(2.1rem,5vw,5rem);font-weight:900;line-height:1;letter-spacing:-.06em}
+.gradient{background:linear-gradient(135deg,#fff 0%,#ffe0b4 36%,#ff9f4a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.date{margin-top:22px;color:var(--gray2);font-size:clamp(1.05rem,2vw,1.32rem);font-weight:700}
+.lead{max-width:760px;margin:32px auto 0;font-size:clamp(1.55rem,3vw,2.7rem);font-weight:900;line-height:1.12;letter-spacing:-.045em}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:40px 0 34px}
+.step{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.13);background:linear-gradient(180deg,rgba(13,27,49,.88),rgba(8,17,31,.94));border-radius:28px;padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.33);text-align:left;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.step:hover{transform:translateY(-5px);border-color:rgba(240,115,22,.42);box-shadow:0 28px 95px rgba(0,0,0,.42)}
+.step::after{content:'';position:absolute;inset:auto 24px 0;height:2px;background:linear-gradient(90deg,transparent,var(--orange2),transparent);opacity:.5}
+.num{width:54px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:rgba(240,115,22,.14);border:1px solid rgba(240,115,22,.35);color:var(--orange2);font-weight:900;font-size:1.2rem;margin-bottom:22px}
+.step h2{font-size:1.45rem;line-height:1.22;margin-bottom:14px;letter-spacing:-.03em}
+.step p{color:var(--gray2);font-size:1rem;line-height:1.78;margin-bottom:14px}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:62px;margin-top:24px;padding:18px 26px;border-radius:14px;background:linear-gradient(135deg,#b84f08 0%,#f07316 38%,#ffb35f 56%,#c45a08 100%);color:#fff;font-size:.92rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;text-align:center;box-shadow:0 16px 40px rgba(240,115,22,.34),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 22px 56px rgba(240,115,22,.48);filter:saturate(1.05)}
+.warning{border:1px solid rgba(240,115,22,.35);background:linear-gradient(180deg,rgba(240,115,22,.14),rgba(240,115,22,.05));border-radius:26px;padding:30px;text-align:center;max-width:880px;margin:0 auto 70px}
+.warning h2{font-size:clamp(1.3rem,2.3vw,2rem);color:var(--orange2);line-height:1.18;margin-bottom:12px}
+.warning p{color:var(--gray2);font-size:1.04rem;max-width:720px;margin:0 auto}
+.pending{font-size:.76rem;color:rgba(197,212,232,.58);margin-top:10px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:780px){.hero{padding-top:58px}.steps{grid-template-columns:1fr}.step{padding:26px}.lead{font-size:1.75rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://nmumykqn.sar.stape.io/ns.html?id=GTM-W98DTTPH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<div class="grain"></div>
+<main class="wrap">
+  <section class="hero reveal">
+    <div class="badge">Inscrição recebida</div>
+    <h1>Como se tornar um <span class="gradient">Comprador Estratégico</span></h1>
+    <p class="date">08 de agosto, às 9h | No Zoom</p>
+    <p class="lead">Falta apenas 2 passos para você garantir seu lugar na aula.</p>
+  </section>
 
-<!-- CONFIRMAÇÃO -->
-<div class="confirm-header">
-  <div class="confirm-inner">
-    <div class="confirm-check"></div>
-    <h1>Parabéns, <em>profissional de compras!</em></h1>
-    <p>Você acabou de dar um passo importante na sua evolução.<br>Sua compra do Treinamento de Strategic Sourcing &amp; Técnicas de Compras foi confirmada com sucesso.</p>
-  </div>
-</div>
+  <section class="steps">
+    <article class="step reveal">
+      <div class="num">01</div>
+      <h2>O link da aula será enviado pelo WhatsApp.</h2>
+      <p>Clique no botão abaixo e entre no grupo oficial.</p>
+      <p>É lá que você vai receber o link de acesso, os lembretes antes da aula e os avisos importantes que não vão ser enviados em nenhum outro lugar.</p>
+      <a class="btn" href="#" data-pending-link="whatsapp">Entrar no grupo do WhatsApp</a>
+      <div class="pending">Link do grupo pendente de configuração.</div>
+    </article>
 
-<!-- UPSELL -->
-<section class="upsell-section">
-  <div class="upsell-inner">
-    <div class="upsell-badge">Antes de acessar o conteúdo</div>
-    <h2>Mas, antes de acessar o conteúdo, eu preciso te mostrar algo que vai fazer toda a diferença na forma como você <em>aplica o que acabou de adquirir.</em></h2>
-    <p>Assista ao vídeo abaixo, são apenas 7 minutos:</p>
-    <div class="vsl-wrap" id="vslWrap">
-      <div class="vsl-inner" style="display:block;padding:0">
-        <video id="vslVideo" src="assets/obrigado-leonardo-vsl.mp4"
-               autoplay muted playsinline controls preload="auto"
-               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;display:block"></video>
-      </div>
-      <button class="vsl-unmute" id="vslUnmute" type="button" aria-label="Ativar som">
-        <span class="ic">&#128266;</span> Toque para ativar o som
-      </button>
-    </div>
-    <div class="vsl-speed" id="vslSpeed" aria-label="Velocidade de reprodução">
-      <span class="lbl">Velocidade</span>
-      <button type="button" data-rate="0.75">0.75x</button>
-      <button type="button" data-rate="1" class="on">1x</button>
-      <button type="button" data-rate="1.25">1.25x</button>
-      <button type="button" data-rate="1.5">1.5x</button>
-      <button type="button" data-rate="2">2x</button>
-    </div>
-    <a class="cta-btn" href="https://payfast.greenn.com.br/b6hd2jt/offer/tsAFZQ" target="_blank" rel="noopener">Quero aproveitar esta oferta agora</a>
-  </div>
-</section>
+    <article class="step reveal" style="transition-delay:.1s">
+      <div class="num">02</div>
+      <h2>Responda a uma pesquisa rápida.</h2>
+      <p>Responda a uma pesquisa rápida para finalizar sua inscrição na aula “Como se tornar um Comprador Estratégico”.</p>
+      <p>São menos de 02 minutos.</p>
+      <a class="btn" href="#" data-pending-link="pesquisa">Responder pesquisa</a>
+      <div class="pending">Link da pesquisa pendente de configuração.</div>
+    </article>
+  </section>
 
-<footer>
-  &copy; 2025 Treinamento de Strategic Sourcing &amp; Técnicas de Compras. Todos os direitos reservados.
-</footer>
-
+  <section class="warning reveal">
+    <h2>Atenção: as vagas são limitadas.</h2>
+    <p>O link será enviado apenas no grupo do WhatsApp, e mesmo quem se inscreveu pode ficar de fora se não estiver lá na hora. Não deixe para depois.</p>
+  </section>
+</main>
 <script>
-/* VSL player: autoplay mudo + ativar som + velocidade + trava de avanco */
 (function(){
-  var v = document.getElementById('vslVideo');
-  if(!v) return;
-  var unmute = document.getElementById('vslUnmute');
-  var speed  = document.getElementById('vslSpeed');
-  var p = v.play();
-  if(p && p.catch){ p.catch(function(){}); }
-  if(unmute){
-    unmute.addEventListener('click', function(){
-      v.muted = false; v.volume = 1;
-      if(v.paused){ v.play().catch(function(){}); }
-      unmute.classList.add('hide');
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('on')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('on'); io.unobserve(entry.target); }
     });
-    v.addEventListener('volumechange', function(){
-      if(!v.muted){ unmute.classList.add('hide'); }
-    });
-  }
-  if(speed){
-    speed.addEventListener('click', function(e){
-      var b = e.target.closest('button[data-rate]');
-      if(!b) return;
-      v.playbackRate = parseFloat(b.getAttribute('data-rate'));
-      speed.querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
-      b.classList.add('on');
-    });
-  }
-  /* TRAVA: nao pode pular pra frente - so assistir (acelerar a velocidade e permitido) */
-  var maxWatched = 0;
-  v.addEventListener('timeupdate', function(){
-    if(!v.seeking){ maxWatched = Math.max(maxWatched, v.currentTime); }
-  });
-  v.addEventListener('seeking', function(){
-    if(v.currentTime > maxWatched + 0.4){ v.currentTime = maxWatched; }
-  });
+  }, { threshold: .14 });
+  els.forEach(el => io.observe(el));
 })();
 </script>
 </body>
