@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrição quase confirmada | Comprador Estratégico</title>
-<meta name="description" content="Falta apenas 2 passos para garantir seu lugar na aula Como se tornar um Comprador Estratégico.">
+<meta name="description" content="Falta apenas um passo para garantir seu lugar na aula Como se tornar um Comprador Estratégico.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@ h1{font-size:clamp(2.1rem,5vw,5rem);font-weight:900;line-height:1;letter-spacing
 .gradient{background:linear-gradient(135deg,#fff 0%,#ffe0b4 36%,#ff9f4a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .date{margin-top:22px;color:var(--gray2);font-size:clamp(1.05rem,2vw,1.32rem);font-weight:700}
 .lead{max-width:760px;margin:32px auto 0;font-size:clamp(1.55rem,3vw,2.7rem);font-weight:900;line-height:1.12;letter-spacing:-.045em}
-.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:40px 0 34px}
+.steps{display:grid;grid-template-columns:minmax(0,680px);justify-content:center;gap:22px;margin:40px 0 34px}
 .step{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.13);background:linear-gradient(180deg,rgba(13,27,49,.88),rgba(8,17,31,.94));border-radius:28px;padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.33);text-align:left;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
 .step:hover{transform:translateY(-5px);border-color:rgba(240,115,22,.42);box-shadow:0 28px 95px rgba(0,0,0,.42)}
 .step::after{content:'';position:absolute;inset:auto 24px 0;height:2px;background:linear-gradient(90deg,transparent,var(--orange2),transparent);opacity:.5}
@@ -37,7 +37,6 @@ h1{font-size:clamp(2.1rem,5vw,5rem);font-weight:900;line-height:1;letter-spacing
 .warning{border:1px solid rgba(240,115,22,.35);background:linear-gradient(180deg,rgba(240,115,22,.14),rgba(240,115,22,.05));border-radius:26px;padding:30px;text-align:center;max-width:880px;margin:0 auto 70px}
 .warning h2{font-size:clamp(1.3rem,2.3vw,2rem);color:var(--orange2);line-height:1.18;margin-bottom:12px}
 .warning p{color:var(--gray2);font-size:1.04rem;max-width:720px;margin:0 auto}
-.pending{font-size:.76rem;color:rgba(197,212,232,.58);margin-top:10px;text-align:center}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.on{opacity:1;transform:none}
 @media(max-width:780px){.hero{padding-top:58px}.steps{grid-template-columns:1fr}.step{padding:26px}.lead{font-size:1.75rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
@@ -53,7 +52,7 @@ h1{font-size:clamp(2.1rem,5vw,5rem);font-weight:900;line-height:1;letter-spacing
     <div class="badge">Inscrição recebida</div>
     <h1>Como se tornar um <span class="gradient">Comprador Estratégico</span></h1>
     <p class="date">08 de agosto, às 9h | No Zoom</p>
-    <p class="lead">Falta apenas 2 passos para você garantir seu lugar na aula.</p>
+    <p class="lead">Falta apenas um passo para você garantir seu lugar na aula.</p>
   </section>
 
   <section class="steps">
@@ -62,17 +61,7 @@ h1{font-size:clamp(2.1rem,5vw,5rem);font-weight:900;line-height:1;letter-spacing
       <h2>O link da aula será enviado pelo WhatsApp.</h2>
       <p>Clique no botão abaixo e entre no grupo oficial.</p>
       <p>É lá que você vai receber o link de acesso, os lembretes antes da aula e os avisos importantes que não vão ser enviados em nenhum outro lugar.</p>
-      <a class="btn" href="#" data-pending-link="whatsapp">Entrar no grupo do WhatsApp</a>
-      <div class="pending">Link do grupo pendente de configuração.</div>
-    </article>
-
-    <article class="step reveal" style="transition-delay:.1s">
-      <div class="num">02</div>
-      <h2>Responda a uma pesquisa rápida.</h2>
-      <p>Responda a uma pesquisa rápida para finalizar sua inscrição na aula “Como se tornar um Comprador Estratégico”.</p>
-      <p>São menos de 02 minutos.</p>
-      <a class="btn" href="#" data-pending-link="pesquisa">Responder pesquisa</a>
-      <div class="pending">Link da pesquisa pendente de configuração.</div>
+      <a class="btn" href="https://chat.whatsapp.com/Hqj5NW72rAPFz1Uu3OT8li">Entrar no grupo do WhatsApp</a>
     </article>
   </section>
 
