@@ -176,7 +176,7 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
       <aside class="hero-card reveal" id="inscricao" style="transition-delay:.1s">
         <h2 class="form-title">Garanta sua inscrição gratuita</h2>
         <p class="form-copy">Preencha seus dados para receber o link da aula e os avisos pelo WhatsApp.</p>
-        <form action="obrigado-evento.html" method="get">
+        <form action="obrigado-evento.html" method="get" data-lead-form data-versao="v3">
           <input required name="nome" type="text" placeholder="Digite seu nome" autocomplete="name">
           <input required name="email" type="email" placeholder="Digite seu e-mail" autocomplete="email">
           <input required name="telefone" type="tel" placeholder="Digite seu telefone" autocomplete="tel">
@@ -302,6 +302,40 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
     });
   }, { threshold: .14 });
   els.forEach(el => io.observe(el));
+})();
+
+(function(){
+  const WEBHOOK_URL = 'https://stack-n8n.bykrzl.easypanel.host/webhook/4d17c726-dc3d-4cf9-b24e-2f005d3dc840';
+  const form = document.querySelector('[data-lead-form]');
+  if (!form) return;
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if (form.dataset.enviando === 'true') return;
+    form.dataset.enviando = 'true';
+
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = true;
+
+    const data = new FormData(form);
+    const params = new URLSearchParams(window.location.search);
+    data.set('versao', form.dataset.versao || 'original');
+    data.set('pagina', window.location.href);
+    data.set('data_envio', new Date().toISOString());
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src'].forEach(function(key){
+      if (params.has(key)) data.set(key, params.get(key));
+    });
+
+    const redirect = function(){ window.location.assign(form.action); };
+    if (navigator.sendBeacon && navigator.sendBeacon(WEBHOOK_URL, data)) {
+      redirect();
+      return;
+    }
+
+    fetch(WEBHOOK_URL, { method: 'POST', body: data, mode: 'no-cors', keepalive: true })
+      .catch(function(){})
+      .finally(redirect);
+  });
 })();
 </script>
 </body>
