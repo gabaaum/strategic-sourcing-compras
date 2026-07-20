@@ -80,8 +80,7 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
 .process-step strong{display:block;color:#fff;font-size:.92rem;line-height:1.45}
 .stagger-card{opacity:0;transform:translateY(26px) scale(.98);transition:opacity .62s ease,transform .62s cubic-bezier(.2,.8,.2,1),border-color .28s ease,box-shadow .28s ease,background .28s ease;transition-delay:var(--delay,0ms)}
 .stagger-card.on{opacity:1;transform:none}
-.ai-alert{display:grid;grid-template-columns:68px 1fr;gap:20px;align-items:center;margin-top:20px;padding:23px;border:1px solid rgba(240,115,22,.34);border-radius:22px;background:linear-gradient(135deg,rgba(240,115,22,.17),rgba(240,115,22,.05))}
-.ai-badge{display:grid;place-items:center;width:68px;height:68px;border-radius:18px;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#07111f;font-weight:950;font-size:1.2rem;box-shadow:0 12px 32px rgba(240,115,22,.28)}
+.ai-alert{display:block;margin-top:20px;padding:23px;border:1px solid rgba(240,115,22,.34);border-radius:22px;background:linear-gradient(135deg,rgba(240,115,22,.17),rgba(240,115,22,.05))}
 .ai-alert strong{display:block;color:#fff;font-size:1.05rem;line-height:1.45;margin-bottom:5px}
 .ai-alert p{color:var(--gray2);font-size:.94rem;line-height:1.65}
 .comparison-intro{margin:52px 0 22px;color:var(--gray2);font-size:1.08rem;line-height:1.75;max-width:710px}
@@ -134,12 +133,12 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
   .process-panel{padding:18px}
   .process-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .process-step{min-height:104px;padding:16px 14px}
-  .process-step:not(:last-child)::after{display:none}
+  .process-step:not(:last-child)::after{display:block;right:-12px;font-size:1.35rem}
+  .process-step:nth-child(2)::after{content:'↙';right:auto;left:-12px;top:auto;bottom:-18px;transform:none}
   .process-step:nth-child(odd){transform:translateX(-20px) scale(.98)}
   .process-step:nth-child(even){transform:translateX(20px) scale(.98)}
   .process-step.on{transform:none}
-  .ai-alert{grid-template-columns:50px 1fr;padding:18px;gap:14px}
-  .ai-badge{width:50px;height:50px;border-radius:14px;font-size:.95rem}
+  .ai-alert{padding:20px}
   .compare-card{padding:22px}
   .closing-callout{padding:26px 22px 26px 28px}
 }
@@ -193,15 +192,14 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
       <div class="process-panel">
         <p class="visual-label">A rotina operacional</p>
         <div class="process-flow">
-          <div class="process-step stagger-card" style="--delay:0ms"><strong>Receber a requisição,</strong></div>
-          <div class="process-step stagger-card" style="--delay:110ms"><strong>cotar com três fornecedores,</strong></div>
-          <div class="process-step stagger-card" style="--delay:220ms"><strong>receber as propostas e</strong></div>
-          <div class="process-step stagger-card" style="--delay:330ms"><strong>colocar o pedido de compras.</strong></div>
+          <div class="process-step stagger-card" style="--delay:0ms"><strong>Receber a requisição</strong></div>
+          <div class="process-step stagger-card" style="--delay:110ms"><strong>Cotar com três fornecedores</strong></div>
+          <div class="process-step stagger-card" style="--delay:220ms"><strong>Receber as propostas</strong></div>
+          <div class="process-step stagger-card" style="--delay:330ms"><strong>Colocar o pedido de compras</strong></div>
         </div>
       </div>
 
       <div class="ai-alert">
-        <div class="ai-badge">IA</div>
         <div>
           <strong>Se essa é a descrição do seu dia, existe um problema sério, e ele não é sobre você não trabalhar o suficiente.</strong>
           <p>É sobre isso ser exatamente o que a inteligência artificial já faz mais rápido, sem férias e sem reclamar.</p>
