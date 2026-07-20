@@ -59,10 +59,11 @@ section{position:relative;padding:92px 0}
 .hero-card::before{content:'';position:absolute;inset:0;border-radius:28px;padding:1px;background:linear-gradient(135deg,rgba(255,159,74,.8),transparent 38%,rgba(255,255,255,.2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .form-title{font-size:1.65rem;font-weight:900;letter-spacing:-.03em}
 .form-copy{margin-top:10px;color:var(--gray);font-size:.98rem}
-form{margin-top:24px;display:grid;gap:13px}
-input{width:100%;height:58px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.94);color:#0c1626;font:600 1rem 'Inter',sans-serif;padding:0 18px;outline:none;transition:.2s}
+form{margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr);gap:13px;min-width:0}
+input{width:100%;min-width:0;max-width:100%;height:58px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.94);color:#0c1626;font:600 1rem 'Inter',sans-serif;padding:0 18px;outline:none;transition:.2s}
 input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18)}
 .safe-note{margin-top:14px;text-align:center;color:rgba(197,212,232,.58);font-size:.78rem}
+.hero-card .btn{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
 .divider{width:62px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--orange),var(--orange2));margin-bottom:22px}
 .center{text-align:center}
 .center .divider{margin-left:auto;margin-right:auto}
@@ -185,7 +186,7 @@ input:focus{border-color:var(--orange2);box-shadow:0 0 0 4px rgba(240,115,22,.18
     </div>
   </section>
 
-  <section class="market-shift" id="mercado">
+  <section class="market-shift">
     <div class="container-sm reveal">
       <div class="divider"></div>
       <h2 class="section-title">O mercado mudou, e o Comprador que continua fazendo o de sempre está <span class="accent">com os dias contados.</span></h2>
