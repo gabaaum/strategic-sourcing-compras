@@ -575,13 +575,27 @@ section{padding:88px 20px}
     });
   }
 
-  /* TRAVA: nao pode pular pra frente - so assistir (acelerar a velocidade e permitido) */
+  /* Impede avanço sem criar um ciclo de seeking em navegadores móveis. */
   var maxWatched = 0;
+  var correctingSeek = false;
+
   v.addEventListener('timeupdate', function(){
-    if(!v.seeking){ maxWatched = Math.max(maxWatched, v.currentTime); }
+    if(!v.seeking && !correctingSeek){
+      maxWatched = Math.max(maxWatched, v.currentTime);
+    }
   });
+
   v.addEventListener('seeking', function(){
-    if(v.currentTime > maxWatched + 0.4){ v.currentTime = maxWatched; }
+    if(correctingSeek) return;
+
+    if(v.currentTime > maxWatched + 0.75){
+      correctingSeek = true;
+      v.currentTime = Math.max(0, maxWatched - 0.1);
+    }
+  });
+
+  v.addEventListener('seeked', function(){
+    correctingSeek = false;
   });
 })();
 
